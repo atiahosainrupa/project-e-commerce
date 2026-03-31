@@ -31,7 +31,7 @@ const Category = () => {
      icon : FaTshirt
     },
     {
-     title: "Women’s Fashion",
+     title: "Women's Fashion",
      icon : GiLargeDress
     },
     {
