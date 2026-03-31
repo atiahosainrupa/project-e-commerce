@@ -63,7 +63,7 @@ const Footer = () => {
               </div>
               <div className="footer-content-list order-1 md:order-4">
                 <h4 className='text-[20px] text-[#333333] font-bold'>CONTACT</h4>
-                <p className='pt-[25px] pb-[31px] max-w-[340px] text-[16px] font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                <p className='pt-[26px] pb-[35px] max-w-[340px] text-[16px] font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
                 <div className='flex items-center gap-[27px]'>
                   <TfiHeadphoneAlt className='text-5xl'/>
                   <div >

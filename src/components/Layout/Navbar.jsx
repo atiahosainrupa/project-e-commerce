@@ -8,7 +8,7 @@ import { FaBasketShopping } from 'react-icons/fa6'
 import { IoChevronForward } from "react-icons/io5";
 
 const Navbar = () => {
-  const catagories =[
+  const categories =[
     "Women's Fashion" ,
 "men's Fashion" ,
 "Kid's Fashion" ,
@@ -22,13 +22,11 @@ const Navbar = () => {
     <header>
         <nav className='py-8'>
          <div className="container flex justify-between items-center flex-wrap md:flex-nowrap gap-5">
-            {/* Logo Image */}
             <div className="logo-img">
             <Link to='/' className='order-1'>
              <img src="/Logo.png" alt="logo" />
             </Link>
 
-            {/* Search Bar */}
             </div>
             <div className="search-bar bg-[#F1F1F1] flex items-center rounded-md h-fit w-full md:max-w-md xl:max-w-3xl order-3 md:order-2">
                 <Input placeholder="'I'm looking for..." className='border-none'/>
@@ -36,8 +34,6 @@ const Navbar = () => {
                     <IoSearch className='text-[28px]'/>
                 </Button>
             </div>
-
-            {/* Button */}
             <div className='flex gap-5 md:gap-10 order-2 md:order-3 text-nowrap'>
 
                 <Link to='/login' className='flex gap-1.5 font-normal text-base items-center'><FaRegUser className='text-xl'/>  <span className='hidden md:block'>Login</span> </Link>
@@ -51,7 +47,7 @@ const Navbar = () => {
 
   <ul className="flex gap-[18px] md:gap-14 whitespace-nowrap overflow-x-auto">
     {
-      catagories.map((item, i) => (
+      categories.map((item, i) => (
         <li key={i}>
           <Link
             to="/"
