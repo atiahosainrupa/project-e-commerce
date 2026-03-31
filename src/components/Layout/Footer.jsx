@@ -24,19 +24,19 @@ const Footer = () => {
               <div className="footer-content-list order-2">
                 <h4 className='text-[20px] text-[#333333] font-bold'>QUICK LINKS</h4>
                 <ul className='pt-5'>
-                  <li className='pt-4 text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">About us</Link>
                   </li>
-                  <li className='pt-4 text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">Contact us</Link>
                   </li>
-                  <li className='pt-4 text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">Products</Link>
                   </li>
-                  <li className='pt-4 text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">Login</Link>
                   </li>
-                  <li className=' text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">Sign Up</Link>
                   </li>
                 </ul>
@@ -44,19 +44,19 @@ const Footer = () => {
               <div className="footer-content-list order-3">
                 <h4 className='text-[20px] text-[#333333] font-bold'>CUSTOMER AREA</h4>
                 <ul className='pt-5'>
-                  <li className='pt-4 text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">My Account</Link>
                   </li>
-                  <li className='pt-4 text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">Orders</Link>
                   </li>
-                  <li className='pt-4 text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">Terms</Link>
                   </li>
-                  <li className='pt-4 text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">Privacy Policy</Link>
                   </li>
-                  <li className=' text-black/80'>
+                  <li className='pt-3 text-black/80'>
                     <Link to="/">Shipping Information</Link>
                   </li>
                 </ul>
