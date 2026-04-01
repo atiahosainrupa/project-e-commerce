@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
-import { TfiHeadphoneAlt } from 'react-icons/tfi'
+import { BiHeadphone } from "react-icons/bi";
+
 
 import { Link } from 'react-router'
 
@@ -65,7 +66,7 @@ const Footer = () => {
                 <h4 className='text-[20px] text-[#333333] font-bold'>CONTACT</h4>
                 <p className='pt-[26px] pb-[35px] max-w-[340px] text-[16px] font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
                 <div className='flex items-center gap-[27px]'>
-                  <TfiHeadphoneAlt className='text-5xl'/>
+                  <BiHeadphone className='text-5xl'/>
                   <div >
                     <h4 className='text-[18px] text-black font-normal'>Have any question?</h4>
                     <p className='text-[#0198E9] text-[28px] font-semibold'>099 456 789</p>

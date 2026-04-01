@@ -1,30 +1,38 @@
 import React from 'react'
-import { FaBook, FaGift, FaGifts, FaHome, FaPaw, FaShoppingBasket, FaTools, FaTshirt } from 'react-icons/fa'
-import { GiDiamondRing, GiLargeDress } from 'react-icons/gi'
-import { MdArrowForward, MdArrowForwardIos, MdHealthAndSafety, MdOutlineLocalGroceryStore, MdWatch } from 'react-icons/md'
+import { FaBook, FaGift, FaGifts, FaPaw, FaShoppingBasket, FaTools, FaTshirt } from 'react-icons/fa'
+import { GiLargeDress } from 'react-icons/gi'
+import { MdArrowForwardIos} from 'react-icons/md'
+import { TbHealthRecognition } from "react-icons/tb";
+import { FaPersonDress } from "react-icons/fa6";
+import { TbHorseToy } from "react-icons/tb";
+import { SiIfood } from "react-icons/si";
+import { BiSolidHomeHeart } from "react-icons/bi";
+import { BsWatch } from "react-icons/bs";
+
+
 import { Link } from 'react-router'
 
 const Category = () => {
   const categories = [
     {
      title: "Health & Household",
-     icon : MdHealthAndSafety
+     icon : TbHealthRecognition 
     },
     {
      title: "Kids Fashion",
-     icon : FaTshirt
+     icon : FaPersonDress
     },
     {
      title: "Toys",
-     icon : FaGift
+     icon : TbHorseToy
     },
     {
      title: "Groceries",
-     icon : MdOutlineLocalGroceryStore
+     icon : SiIfood
     },
     {
      title: "Home & Lifestyle",
-     icon : FaHome
+     icon : BiSolidHomeHeart
     },
     {
      title: "Men Fashion",
@@ -48,11 +56,11 @@ const Category = () => {
     },
     {
      title: "Watches",
-     icon : MdWatch
+     icon : BsWatch
     },
     {
-     title: "Mens Fashion",
-     icon : GiDiamondRing
+     title: "Men Fashion",
+     icon : FaTshirt
     },
     {
      title: "Tools & Hardware",

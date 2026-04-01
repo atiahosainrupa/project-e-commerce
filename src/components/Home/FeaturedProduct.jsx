@@ -18,22 +18,22 @@ const FeaturedProduct = () => {
           
         </div>
         <Link to='/' className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 mt-5 gap-1 md:gap-6'>
-        <ProductCard head="Headrest Executive Mesh Office Chairset" img="feature-img-1.png" price="৳10500"/>
-        <ProductCard head="Women fashion dress set" img="feature-img-2.png" price="৳1000"/>
-        <ProductCard head="Headrest Executive Mesh Office Chairset" img="feature-img-3.png" price="৳5000"/>
-        <ProductCard head="Headrest Executive Mesh Office Chairset" img="feature-img-4.png" price="৳1000"/>
-        <ProductCard head="Headrest Executive Mesh Office Chairset" img="women-fashion-1.png" price="৳10500"/>
+        <ProductCard head="Men fashion watch set " img="feature-img-1.png" price="৳10500"/>
+        <ProductCard head="Headrest Executive Mesh Office Chair set" img="feature-img-2.png" price="৳1000"/>
+        <ProductCard head="Headrest Executive Mesh Office Chair set" img="feature-img-3.png" price="৳5000"/>
+        <ProductCard head="Headrest Executive Mesh Office Chair set" img="feature-img-4.png" price="৳1000"/>
+        <ProductCard head="Women fashion dress set" img="women-fashion-1.png" price="৳10500"/>
         <ProductCard head="Women fashion dress set" img="women-fashion-2.png" price="৳1000"/>
-        <ProductCard head="Headrest Executive Mesh Office Chairset" img="women-fashion-3.png" price="৳5000"/>
-        <ProductCard head="Women black dress and red hat collection" img="women-fashion-4.png" price="৳1000"/>
-        <ProductCard head="Headrest Executive Mesh Office Chairset" img="women-fashion-5.png" price="৳10500"/>
+        <ProductCard head="Women pink dress and red cap collection" img="women-fashion-3.png" price="৳5000"/>
+        <ProductCard head="Women black dress and red cap collection" img="women-fashion-4.png" price="৳1000"/>
+        <ProductCard head="Women black dress and red cap collection" img="women-fashion-5.png" price="৳10500"/>
         <ProductCard head="Women fashion dress set" img="women-fashion-6.png" price="৳1000"/>
-        <ProductCard head="Headrest Executive Mesh Office Chairset" img="women-fashion-7.png" price="৳5000"/>
-        <ProductCard head="Women black dress and red hat collection" img="women-fashion-8.png" price="৳1000"/>
-        <ProductCard head="Headrest Executive Mesh Office Chairset" img="feature-img-1.png" price="৳10500"/>
-        <ProductCard head="Women fashion dress set" img="feature-img-5.png" price="৳1000"/>
-        <ProductCard head="Headrest Executive Mesh Office Chairset" img="feature-img-6.png" price="৳5000"/>
-        <ProductCard head="Women black dress and red hat collection" img="feature-img-7.png" price="৳1000"/>
+        <ProductCard head="Women fashion dress set" img="women-fashion-7.png" price="৳5000"/>
+        <ProductCard head="Women fashion dress set" img="women-fashion-8.png" price="৳1000"/>
+        <ProductCard head="Men fashion watch set " img="feature-img-1.png" price="৳10500"/>
+        <ProductCard head="Lite set " img="feature-img-5.png" price="৳1000"/>
+        <ProductCard head="Women fashion bag set" img="feature-img-6.png" price="৳5000"/>
+        <ProductCard head="Men fashion black bag set" img="feature-img-7.png" price="৳1000"/>
         </Link>
       </div>
       <div className='flex justify-center pt-10'>

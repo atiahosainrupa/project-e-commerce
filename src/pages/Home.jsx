@@ -4,7 +4,7 @@ import Category from '../components/Home/Category'
 import FlashDeals from '../components/Home/FlashDeals'
 import FeaturedProduct from '../components/Home/FeaturedProduct'
 import Footer from '../components/Layout/Footer'
-import Services from '../components/UI/Services'
+import Services from '../components/Layout/Services'
 
 const Home = () => {
   return (

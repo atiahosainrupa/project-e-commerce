@@ -18,8 +18,6 @@ const Banner = () => {
       </div>
     )
   };
-
-
   return (
     <section className='pt-[12px] pb-[50px]'>
       <div className="container flex gap-[27px]">
