@@ -24,7 +24,7 @@ const Navbar = () => {
          <div className="container flex justify-between items-center flex-wrap md:flex-nowrap gap-5">
             <div className="logo-img">
             <Link to='/' className='order-1'>
-             <img src="/Logo.png" alt="logo" />
+             <img src="/logo.png" alt="logo" />
             </Link>
 
             </div>

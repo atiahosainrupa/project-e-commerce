@@ -79,7 +79,7 @@ const Footer = () => {
               <div className='flex items-center '>
                 <h4 className='text-[18px] font-medium text-[#0198E9] hidden md:block'>Pay With</h4>
                 <Link to="/" className='hidden md:block'>
-                <img src="Pay.png" alt="pay" />
+                <img src="pay.png" alt="pay" />
                 </Link>
               </div>
             </div>
