@@ -12,9 +12,9 @@ const Footer = () => {
             <div className="footer-content grid grid-cols-1 md:grid-cols-4 pt-[60px] pb-[40px] md:pb-[83px] gap-8">
               <div className="footer-content-list order-4 md:order-1">
                 <Link to="/" className='hidden md:block'>
-                <img src="Logo.png" alt="" />
+                <img src="/logo.png" alt="" />
                 </Link>
-                <p className='max-w-[390px] pt-[35px] pb-[26px] hidden md:block '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className='max-w-[390px] pt-[35px] pb-[26px] hidden md:block '>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, distinctio?</p>
                 <div className='flex gap-5 text-[40px] text-blue-700'>
                   <FaFacebook />
                   <FaTwitter />
@@ -79,7 +79,7 @@ const Footer = () => {
               <div className='flex items-center '>
                 <h4 className='text-[18px] font-medium text-[#0198E9] hidden md:block'>Pay With</h4>
                 <Link to="/" className='hidden md:block'>
-                <img src="pay.png" alt="pay" />
+                <img src="/pay.png" alt="pay" />
                 </Link>
               </div>
             </div>

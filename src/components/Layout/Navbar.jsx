@@ -45,13 +45,13 @@ const Navbar = () => {
         </nav>
         <div className="container flex items-center justify-center pb-2.5 border-b border-b-[#EFEEEE]">
 
-  <ul className="flex gap-[18px] md:gap-14 whitespace-nowrap overflow-x-auto">
+  <ul className="flex gap-xl md:gap-14 whitespace-nowrap overflow-x-auto">
     {
       categories.map((item, i) => (
         <li key={i}>
           <Link
             to="/"
-            className="font-medium text-[14px] md:text-base text-primary uppercase whitespace-nowrap"
+            className="font-medium text-xl md:text-base text-primary uppercase whitespace-nowrap"
           >
             {item}
           </Link>

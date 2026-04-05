@@ -7,7 +7,7 @@ import { IoIosArrowDown } from 'react-icons/io'
 
 const FeaturedProduct = () => {
   return (
-    <section className='pb-[50px]'>
+    <section className='pb-12'>
       <div className="container">
         <div className='flex justify-between'>
           <h3 className='sub_head text-[#2E2E2E]'>Featured Product</h3>

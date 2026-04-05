@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router';
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 
 const Banner = () => {
   const settings = {
