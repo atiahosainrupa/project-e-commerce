@@ -9,12 +9,12 @@ const Footer = () => {
   return (
     <footer>
         <div className='container'>
-            <div className="footer-content grid grid-cols-1 md:grid-cols-4 pt-[60px] pb-[40px] md:pb-[83px] gap-8">
+            <div className="footer-content grid grid-cols-1 md:grid-cols-4 pt-14 pb-10 md:pb-20 gap-8">
               <div className="footer-content-list order-4 md:order-1">
                 <Link to="/" className='hidden md:block'>
                 <img src="/logo.png" alt="" />
                 </Link>
-                <p className='max-w-[390px] pt-[35px] pb-[26px] hidden md:block '>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, distinctio?</p>
+                <p className='max-w-96 pt-9 pb-7 hidden md:block '>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, distinctio?</p>
                 <div className='flex gap-5 text-[40px] text-blue-700'>
                   <FaFacebook />
                   <FaTwitter />
@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footer-content-list order-2">
-                <h4 className='text-[20px] text-[#333333] font-bold'>QUICK LINKS</h4>
+                <h4 className='text-5 text-[#333333] font-bold'>QUICK LINKS</h4>
                 <ul className='pt-5'>
                   <li className='pt-3 text-black/80'>
                     <Link to="/">About us</Link>
@@ -43,7 +43,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="footer-content-list order-3">
-                <h4 className='text-[20px] text-[#333333] font-bold'>CUSTOMER AREA</h4>
+                <h4 className='text-5 text-[#333333] font-bold'>CUSTOMER AREA</h4>
                 <ul className='pt-5'>
                   <li className='pt-3 text-black/80'>
                     <Link to="/">My Account</Link>
@@ -64,12 +64,12 @@ const Footer = () => {
               </div>
               <div className="footer-content-list order-1 md:order-4">
                 <h4 className='text-[20px] text-[#333333] font-bold'>CONTACT</h4>
-                <p className='pt-[26px] pb-[35px] max-w-[340px] text-[16px] font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-                <div className='flex items-center gap-[27px]'>
+                <p className='pt-7 pb-9 max-w-80 text-4 font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                <div className='flex items-center gap-7'>
                   <BiHeadphone className='text-5xl'/>
                   <div >
                     <h4 className='text-[18px] text-black font-normal'>Have any question?</h4>
-                    <p className='text-[#0198E9] text-[28px] font-semibold'>099 456 789</p>
+                    <p className='text-[#0198E9] text-7 font-semibold'>099 456 789</p>
                   </div>
                 </div>
               </div>

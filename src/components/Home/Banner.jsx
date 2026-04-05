@@ -20,8 +20,8 @@ const Banner = () => {
     )
   };
   return (
-    <section className='pt-[12px] pb-[50px]'>
-      <div className="container flex gap-[27px]">
+    <section className='pt-3 pb-12'>
+      <div className="container flex gap-7">
         <div className='w-full md:w-[66%]'>
 
             <Slider {...settings}>
