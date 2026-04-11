@@ -4,6 +4,9 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import ProductDetails from './pages/ProductDetails'
+import Registration from './pages/Registration'
+import Login from './pages/Login'
+// import Api from './pages/Api'
 
 const App = () => {
   return (
@@ -13,7 +16,10 @@ const App = () => {
           <Route index element={<Home/>}/>
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/shop/:id' element={<ProductDetails/>}/>
-          {/* <Route path='/registration' element={<Registration/>}/> */}
+          <Route path='/registration' element={<Registration/>}/>
+          <Route path='/login' element={<Login/>}/>
+          {/* <Route path='/api' element={<Api/>}/> */}
+
         </Route >
       </Routes>
    </BrowserRouter>

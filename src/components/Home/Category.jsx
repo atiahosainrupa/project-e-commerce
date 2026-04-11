@@ -59,7 +59,7 @@ const Category = () => {
      icon : BsWatch
     },
     {
-     title: "Men Fashion",
+     title: "women fashion",
      icon : FaTshirt
     },
     {
