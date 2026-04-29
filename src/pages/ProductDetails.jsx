@@ -2,8 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import { NextArrow,PrevArrow } from '../components/UI/Arrows';
+import { useGetProductDetailsQuery } from './services/api';
 
 const ProductDetails = () => {
+  const { data } = useGetProductDetailsQuery(1);
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   let sliderRef1 = useRef(null);
@@ -70,8 +72,9 @@ const ProductDetails = () => {
        
       </Slider>
         </div>
-        <div>
-            Product Details.
+        <div className="space-y-4">
+         <h1 className="text-4xl text-primary" >{data?.title}</h1>
+         <p className="text-xl text-primary ">{data?.description}</p>
         </div>
     </div>
    </section>

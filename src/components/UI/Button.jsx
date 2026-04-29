@@ -14,7 +14,10 @@ const Button = ({
     "px-6 py-3 rounded-lg font-medium transition-all duration-200";
 
   const variants = {
-    primary: "bg-brand text-white hover:opacity-90",
+    primary: "bg-brand text-white", 
+    secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
+    danger: "bg-red-600 text-white hover:bg-red-700",
+    outline: "border border-gray-300 text-gray-700 hover:bg-gray-100",
   };
 
   const selectedVariant = variants[variant] ?? variants.primary;

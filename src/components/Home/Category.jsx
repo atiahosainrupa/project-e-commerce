@@ -11,89 +11,22 @@ import { BsWatch } from "react-icons/bs";
 
 
 import { Link } from 'react-router'
+import { useGetCategoryListQuery } from '../../pages/services/api';
 
 const Category = () => {
-  const categories = [
-    {
-     title: "Health & Household",
-     icon : TbHealthRecognition 
-    },
-    {
-     title: "Kids Fashion",
-     icon : FaPersonDress
-    },
-    {
-     title: "Toys",
-     icon : TbHorseToy
-    },
-    {
-     title: "Groceries",
-     icon : SiIfood
-    },
-    {
-     title: "Home & Lifestyle",
-     icon : BiSolidHomeHeart
-    },
-    {
-     title: "Men Fashion",
-     icon : FaTshirt
-    },
-    {
-     title: "Women's Fashion",
-     icon : GiLargeDress
-    },
-    {
-     title: "Stationary & Books",
-     icon : FaBook
-    },
-    {
-     title: "Leather Goods",
-     icon : FaShoppingBasket
-    },
-    {
-     title: "Jewelleries",
-     icon : FaGift
-    },
-    {
-     title: "Watches",
-     icon : BsWatch
-    },
-    {
-     title: "women fashion",
-     icon : FaTshirt
-    },
-    {
-     title: "Tools & Hardware",
-     icon : FaTools
-    },
-    {
-     title: "Pet Supplies",
-     icon : FaPaw
-    },
-    {
-     title: "Seasonal",
-     icon : FaGifts
-    },
-
-
-  ]
+  const { data } = useGetCategoryListQuery();
   return (
-    <section className='pb-[45px]'>
+    <section className="py-12">
       <div className="container">
         <h3 className='sub_head'>Category</h3>
         <div className='mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5'>
 
-          {
-            categories.map((item) => (
-                <Link key={item.title} to="/" className='p-4 shadow flex items-center rounded-xl justify-between'>
-                   <div className='flex gap-2.5 items-center'>
-                     <item.icon className='text-3xl text-[#0970CD]' />
-                     <p className='font-normal text-base text-secondary'>{item.title}</p>
-                   </div>
-                   <MdArrowForwardIos className='text-[#999999] ' />
+          {data?.map((item) => (
+                <Link key={item} to={`/shop?category=${item}`} className='p-4 shadow flex items-center rounded-xl justify-between'>
+                     <p className='font-normal text-base text-secondary'>{item}</p>
+                   <MdArrowForwardIos className="text-[#999999] ml-auto" />
                 </Link>
-              ))
-          }
+              ))}
         </div>
       </div>
     </section>

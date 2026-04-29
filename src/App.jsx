@@ -6,7 +6,6 @@ import Shop from './pages/Shop'
 import ProductDetails from './pages/ProductDetails'
 import Registration from './pages/Registration'
 import Login from './pages/Login'
-// import Api from './pages/Api'
 
 const App = () => {
   return (
@@ -18,8 +17,6 @@ const App = () => {
           <Route path='/shop/:id' element={<ProductDetails/>}/>
           <Route path='/registration' element={<Registration/>}/>
           <Route path='/login' element={<Login/>}/>
-          {/* <Route path='/api' element={<Api/>}/> */}
-
         </Route >
       </Routes>
    </BrowserRouter>
