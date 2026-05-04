@@ -6,6 +6,7 @@ import Button from '../UI/Button'
 import { FaRegHeart, FaRegUser } from 'react-icons/fa'
 import { FaBasketShopping } from 'react-icons/fa6'
 import { IoChevronForward } from "react-icons/io5";
+import SearchBox from './SearchBox'
 
 const Navbar = () => {
   const categories =[
@@ -28,8 +29,9 @@ const Navbar = () => {
             </Link>
 
             </div>
+            
             <div className="search-bar bg-[#F1F1F1] flex items-center rounded-md h-fit w-full md:max-w-md xl:max-w-3xl order-3 md:order-2">
-                <Input placeholder="'I'm looking for..." className='border-none'/>
+               <SearchBox/>
                 <Button className='rounded-l-none px-4'>
                     <IoSearch className='text-[28px]'/>
                 </Button>

@@ -52,14 +52,13 @@ const Shop = () => {
   
   ];
 
-
  
 
   return (
     <main className='py-12'>
       <div className="container grid grid-cols-12 gap-14">
 
-        {/* sidebar */}
+      
         <div className='col-span-3 bg-white py-6 px-5 h-fit sticky top-0 left-0'>
           <h3 className='text-lg font-medium text-primary'>Related Categories</h3>
           <div className='space-y-1.5 mt-1'>
@@ -71,7 +70,6 @@ const Shop = () => {
           </div>
         </div>
 
-        {/* products */}
         <div className='col-span-9'>
           <div className='flex items-center justify-between'>
             <p className='font-medium text-lg text-[#424241]/50'>
