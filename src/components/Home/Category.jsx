@@ -8,8 +8,6 @@ import { TbHorseToy } from "react-icons/tb";
 import { SiIfood } from "react-icons/si";
 import { BiSolidHomeHeart } from "react-icons/bi";
 import { BsWatch } from "react-icons/bs";
-
-
 import { Link } from 'react-router'
 import { useGetCategoryListQuery } from '../../pages/services/api';
 
@@ -22,10 +20,16 @@ const Category = () => {
         <div className='mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5'>
 
           {data?.map((item) => (
-                <Link key={item} to={`/shop?category=${item}`} className='p-4 shadow flex items-center rounded-xl justify-between'>
-                     <p className='font-normal text-base text-secondary'>{item}</p>
-                   <MdArrowForwardIos className="text-[#999999] ml-auto" />
-                </Link>
+                <Link
+              to={`/Shop?category=${item.slug}`}
+              key={item.slug}
+              className="p-4 shadow flex items-center  rounded-xl justify-between shadow-primary/30 capitalize "
+            >
+              <div className="flex gap-2.5 items-center justify-between">
+                <p className="font-medium text-primary text-xl">{item.name}</p>
+              </div>
+              <MdArrowForwardIos className='text-primary' />
+            </Link>
               ))}
         </div>
       </div>
