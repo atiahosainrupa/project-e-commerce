@@ -4,12 +4,12 @@ import "slick-carousel/slick/slick.css";
 import { NextArrow, PrevArrow } from "../components/UI/Arrows";
 import { useGetProductDetailsQuery } from "./services/api";
 import { useParams } from "react-router";
-import { useDispatch } from "react-redux"; // Redux dispatch ইম্পোর্ট করা হয়েছে
-import { addToCart } from "../redux/cartSlice"; // আপনার স্লাইস এর নাম অনুযায়ী পাথ ঠিক করে নিবেন
+import { useDispatch } from "react-redux"; 
+import { addToCart } from "../redux/cartSlice"; 
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const dispatch = useDispatch(); // Dispatch হুক সেটআপ
+  const dispatch = useDispatch(); 
 
   const { data } = useGetProductDetailsQuery(id);
 
@@ -25,7 +25,7 @@ const ProductDetails = () => {
     setNav2(sliderRef2);
   }, []);
 
-  // কার্টে প্রোডাক্ট পাঠানোর ফাংশন
+  
   const handleAddToCart = () => {
     if (data) {
       dispatch(
@@ -33,9 +33,9 @@ const ProductDetails = () => {
           id: data.id,
           title: data.title,
           price: data.price,
-          thumbnail: data.thumbnail, // ছবির জন্য সঠিক প্রপার্টি
+          thumbnail: data.thumbnail, 
           category: data.category,
-          quantity: qty, // সিলেক্ট করা কোয়ান্টিটি
+          quantity: qty, 
         })
       );
       alert("Product added to cart!");
@@ -117,27 +117,31 @@ const ProductDetails = () => {
           </p>
 
           <div className="flex flex-col lg:flex-row lg:items-center gap-5 pt-5">
-            <div className="flex items-center border border-gray-300 rounded-xl overflow-hidden w-fit">
-              <button
-                className="px-4 py-3 text-xl font-semibold hover:bg-gray-100 transition"
-                onClick={() => qty > 1 && setQty(qty - 1)}
-              >
-                -
-              </button>
+            <div className="flex items-center border border-gray-300 rounded-xl w-fit">
+  <button
+    type="button"
+    className="w-12 h-12 flex items-center justify-center text-2xl font-bold"
+    onClick={() => qty > 1 && setQty(qty - 1)}
+  >
+    -
+  </button>
 
-              <span className="px-6 font-semibold text-lg">{qty}</span>
+  <span className="w-12 text-center font-semibold text-lg">
+    {qty}
+  </span>
 
-              <button
-                className="px-4 py-3 text-xl font-semibold hover:bg-gray-100 transition"
-                onClick={() => setQty(qty + 1)}
-              >
-                +
-              </button>
-            </div>
+  <button
+    type="button"
+    className="w-12 h-12 flex items-center justify-center text-2xl font-bold"
+    onClick={() => setQty(qty + 1)}
+  >
+    +
+  </button>
+</div>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full">
               <button
-                onClick={handleAddToCart} // এখানে ফাংশনটি কল করা হয়েছে
+                onClick={handleAddToCart} 
                 className="bg-black text-white px-6 py-3 rounded-xl shadow hover:opacity-90 transition font-medium w-full sm:w-auto"
               >
                 🛒 Add to Cart
