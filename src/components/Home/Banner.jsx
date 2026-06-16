@@ -62,11 +62,11 @@ const Banner = () => {
         <div className='w-full md:w-[34%] hidden md:flex flex-col space-y-7'>
 
           <Link>
-            <img src="/banner-right-1.png" alt="banner-right-1" className='w-full'/>
+            <img src="/banner-right-1.png" alt="banner-right-img-1" className='w-full'/>
           </Link>
 
           <Link>
-            <img src="/banner-right-2.png" alt="banner-right-2" className='w-full'/>
+            <img src="/banner-right-2.png" alt="banner-right-img-2" className='w-full'/>
           </Link>
 
         </div>
