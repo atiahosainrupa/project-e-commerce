@@ -30,7 +30,7 @@ const Navbar = () => {
         
           <div className="logo-img">
             <Link to='/' className='order-1'>
-              <img src="/logo.png" alt="logo" />
+              <img src="/logo-1.png" alt="logo" />
             </Link>
           </div>
 

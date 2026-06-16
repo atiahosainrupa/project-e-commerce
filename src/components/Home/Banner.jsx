@@ -36,23 +36,23 @@ const Banner = () => {
           <Slider {...settings}>
 
             <Link to='/'>
-              <img src="/banner-1.png" alt="banner-1" className='w-full'/>
+              <img src="/banner-img.png" alt="banner-1" className='w-full'/>
             </Link>
 
             <Link to='/'>
-              <img src="/banner-3.png" alt="banner-3" className='w-full'/>
+              <img src="/banner-img-3.png" alt="banner-3" className='w-full'/>
             </Link>
 
             <Link to='/'>
-              <img src="/banner-5.png" alt="banner-5" className='w-full'/>
+              <img src="/banner-img-5.png" alt="banner-5" className='w-full'/>
             </Link>
 
             <Link to='/'>
-              <img src="/banner-2.png" alt="banner-2" className='w-full'/>
+              <img src="/banner-img-2.png" alt="banner-2" className='w-full'/>
             </Link>
 
             <Link to='/'>
-              <img src="/banner-4.png" alt="banner-4" className='w-full'/>
+              <img src="/banner-img-4.png" alt="banner-4" className='w-full'/>
             </Link>
 
           </Slider>
