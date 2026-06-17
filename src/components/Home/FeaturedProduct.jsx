@@ -31,11 +31,6 @@ const FeaturedProduct = () => {
           }
         </div>
       </div>
-      <div className='flex justify-center pt-10'>
-        <Link to="/" className=' flex items-center gap-1 bg-[#34ADED] py-2.5 px-7 rounded-4xl text-white text-[16px] font-semibold'>
-      Show more <span><IoIosArrowDown /></span>
-      </Link>
-      </div>
     </section>
   )
 }
