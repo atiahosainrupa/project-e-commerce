@@ -38,7 +38,6 @@ const Shop = () => {
     <main className="py-12 bg-gray-50 min-h-screen">
       <div className="container grid grid-cols-12 gap-10">
         
-     
         <div className="col-span-3 bg-white py-6 px-5 h-fit sticky top-4 rounded-xl shadow-sm">
           <h3 className="text-lg font-bold text-primary mb-4">Related Categories</h3>
           
@@ -55,7 +54,7 @@ const Shop = () => {
               </Link>
             ))}
           </div>
-           <div className='py-6 lg:py-12 my-4 lg:my-6 border-y-2 border-y-secondary/10'>
+          <div className='py-6 lg:py-12 my-4 lg:my-6 border-y-2 border-y-secondary/10'>
             <h3 className='text-base lg:text-lg font-medium text-primary'>Filter by Price</h3>
             <input type="Range" className='w-full lg:w-64 my-4 lg:my-7' />
             <p className='text-sm lg:text-base'><span className='text-primary/50'>Price:</span> ৳1000 - ৳2500 </p>
@@ -82,10 +81,18 @@ const Shop = () => {
               />
             </div>
           </div>
-
           {isLoading ? (
-            <div className="flex justify-center items-center h-64">
-              <p className="text-lg font-medium text-gray-400 animate-pulse">Loading products...</p>
+            <div className="flex flex-col justify-center items-center h-96 bg-white rounded-xl shadow-sm w-full">
+        
+              <div className="relative w-14 h-14 flex items-center justify-center">
+            
+                <div className="absolute w-full h-full border-4 border-sky-100 rounded-full"></div>
+              
+                <div className="absolute w-full h-full border-4 border-[#00A3FF] border-t-transparent rounded-full animate-spin"></div>
+              </div>
+              <p className="mt-4 text-base font-medium text-gray-400 tracking-wide animate-pulse">
+                Loading products, please wait...
+              </p>
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -94,6 +101,7 @@ const Shop = () => {
               ))}
             </div>
           )}
+
           {totalPage > 1 && (
             <div className="mt-10 flex justify-center">
               <Pagination 

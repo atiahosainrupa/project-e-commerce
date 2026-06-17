@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'; 
 import { removeFromCart, increaseQty, decreaseQty } from "../redux/cartSlice"; 
 
 const MyCart = () => {
   const dispatch = useDispatch();
-  
-  
   const cartItems = useSelector((state) => state.cart.items); 
 
-  const shipping = 5.00;
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+    window.dispatchEvent(new Event("cartUpdated"));
+  }, [cartItems]);
+
+  const shipping = cartItems.length > 0 ? 5.00 : 0.00;
 
   const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
   const total = subtotal + shipping;
@@ -38,18 +41,18 @@ const MyCart = () => {
                 <div className="flex items-center border rounded-lg overflow-hidden bg-gray-50">
                   <button 
                     onClick={() => dispatch(decreaseQty(item.id))} 
-                    className="px-3 py-1 hover:bg-gray-200 transition font-bold"
+                    className="px-3 py-1 hover:bg-gray-200 transition font-bold cursor-pointer"
                   >-</button>
                   <span className="px-4 font-semibold">{item.quantity}</span>
                   <button 
                     onClick={() => dispatch(increaseQty(item.id))} 
-                    className="px-3 py-1 hover:bg-gray-200 transition font-bold"
+                    className="px-3 py-1 hover:bg-gray-200 transition font-bold cursor-pointer"
                   >+</button>
                 </div>
                 
                 <button 
                   onClick={() => dispatch(removeFromCart(item.id))}
-                  className="bg-[#ED363D] text-white px-5 py-2 rounded-lg hover:bg-red-700 transition font-medium"
+                  className="bg-[#ED363D] text-white px-5 py-2 rounded-lg hover:bg-red-700 transition font-medium cursor-pointer"
                 >
                   Remove
                 </button>
@@ -78,7 +81,10 @@ const MyCart = () => {
           <span>Total</span>
           <span>${total.toFixed(2)}</span>
         </div>
-        <button className="w-full bg-[#1C1C1E] text-white py-4 rounded-xl font-bold hover:bg-black transition text-lg shadow-lg">
+        <button 
+          disabled={cartItems.length === 0}
+          className="w-full bg-[#1C1C1E] text-white py-4 rounded-xl font-bold hover:bg-black transition text-lg shadow-lg disabled:bg-gray-400 disabled:cursor-not-allowed"
+        >
           Proceed to Checkout
         </button>
       </div>

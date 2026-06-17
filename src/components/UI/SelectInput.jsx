@@ -7,8 +7,8 @@ const SelectInput = ({
   onChange,
   placeholder = "Select an option",
   error,
-  className = "",        // wrapper er jonno
-  selectClassName = "",  // select er jonno (NEW)
+  className = "",        
+  selectClassName = "",  
   disabled = false,
   ...props
 }) => {

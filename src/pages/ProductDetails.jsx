@@ -25,20 +25,34 @@ const ProductDetails = () => {
     setNav2(sliderRef2);
   }, []);
 
-  
   const handleAddToCart = () => {
     if (data) {
-      dispatch(
-        addToCart({
-          id: data.id,
-          title: data.title,
-          price: data.price,
-          thumbnail: data.thumbnail, 
-          category: data.category,
-          quantity: qty, 
-        })
-      );
-      alert("Product added to cart!");
+      const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+      const isAlreadyInCart = existingCart.some((item) => item.id === data.id);
+
+      if (isAlreadyInCart) {
+  
+        alert("This product is already added to your cart!");
+      } else {
+      
+        dispatch(
+          addToCart({
+            id: data.id,
+            title: data.title,
+            price: data.price,
+            thumbnail: data.thumbnail, 
+            category: data.category,
+            quantity: qty, 
+          })
+        );
+
+        const updatedCart = [...existingCart, { ...data, quantity: qty }];
+        localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+        window.dispatchEvent(new Event("cartUpdated"));
+        
+        alert("Product successfully added to cart!");
+      }
     }
   };
 
@@ -118,31 +132,31 @@ const ProductDetails = () => {
 
           <div className="flex flex-col lg:flex-row lg:items-center gap-5 pt-5">
             <div className="flex items-center border border-gray-300 rounded-xl w-fit">
-  <button
-    type="button"
-    className="w-12 h-12 flex items-center justify-center text-2xl font-bold"
-    onClick={() => qty > 1 && setQty(qty - 1)}
-  >
-    -
-  </button>
+              <button
+                type="button"
+                className="w-12 h-12 flex items-center justify-center text-2xl font-bold"
+                onClick={() => qty > 1 && setQty(qty - 1)}
+              >
+                -
+              </button>
 
-  <span className="w-12 text-center font-semibold text-lg">
-    {qty}
-  </span>
+              <span className="w-12 text-center font-semibold text-lg">
+                {qty}
+              </span>
 
-  <button
-    type="button"
-    className="w-12 h-12 flex items-center justify-center text-2xl font-bold"
-    onClick={() => setQty(qty + 1)}
-  >
-    +
-  </button>
-</div>
+              <button
+                type="button"
+                className="w-12 h-12 flex items-center justify-center text-2xl font-bold"
+                onClick={() => setQty(qty + 1)}
+              >
+                +
+              </button>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full">
               <button
                 onClick={handleAddToCart} 
-                className="bg-black text-white px-6 py-3 rounded-xl shadow hover:opacity-90 transition font-medium w-full sm:w-auto"
+                className="bg-black text-white px-6 py-3 rounded-xl shadow hover:opacity-90 transition font-medium w-full sm:w-auto cursor-pointer"
               >
                 🛒 Add to Cart
               </button>
